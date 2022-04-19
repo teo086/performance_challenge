@@ -1,0 +1,14 @@
+export default function wrapGifts(gifts) {
+  let cols = 0;
+  if(gifts[0].lenght >= 1){
+    for ( let _ of gifts[0]){
+        cols++;
+      };
+    };
+
+  return [
+    '*${"**".repeat(cols)}*',
+     ...gifts.map(row => '*${row}*'),
+     '*${"**".repeat(cols)}*'
+  ];
+}

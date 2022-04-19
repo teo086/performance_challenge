@@ -1,0 +1,18 @@
+export default function contarOvejas(ovejas) {
+  const result = [];
+
+   ovejas.forEach(x => {
+     ((x.name.toLowerCase().includes('n') && 
+     x.name.toLowerCase().includes('a') && 
+     x.color == 'rojo')) ? result.push(x) : "";
+   })
+  return result;
+}
+console.log(contarOvejas([
+  { name: 'Noa', color: 'azul' },
+  { name: 'Euge', color: 'rojo' },
+  { name: 'Navidad', color: 'rojo' },
+  { name: 'Ki Na Ma', color: 'rojo'},
+  { name: 'AAAAAaaaaa', color: 'rojo' },
+  { name: 'Nnnnnnnn', color: 'rojo'}
+]))

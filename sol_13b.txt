@@ -1,0 +1,15 @@
+export default function wrapGifts(gifts) {
+  const gifts1 = [...gifts];
+  const add = '**';
+  gifts1.unshift(add);
+  gifts1.push(add);
+  const newGift = [];
+      for(let i = 0; i < gifts1.length; i++) {
+        [i].unshift('**');
+        [i].push('*');
+        newGift.push(gifts1[i]);
+      }
+  return newGift;
+}
+
+console.log(wrapGifts(["🎮🧸"]))
